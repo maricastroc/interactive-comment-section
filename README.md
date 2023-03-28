@@ -17,5 +17,5 @@
 <h3>Built with:</h3>
 <li>HTML</li>
 <li>CSS / SASS</li>
-<li>JavaScript</li>
+<li>TypeScript</li>
 <li>React JS
