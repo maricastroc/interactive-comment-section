@@ -16,6 +16,6 @@
 <h2>:computer: My Process</h2>
 <h3>Built with:</h3>
 <li>HTML</li>
-<li>CSS / SASS</li>
+<li>CSS</li>
 <li>TypeScript</li>
 <li>React JS
