@@ -142,10 +142,11 @@ export function Comment(props: CommentProps) {
     }
 
     function deleteComment(commentToDelete: string) {
-        const commentsWithoutDeletedOne =
-            props.replies.filter((reply) => {
+        const commentsWithoutDeletedOne = allReplies.filter(
+            (reply) => {
                 return reply.content !== commentToDelete;
-            });
+            }
+        );
 
         setAllReplies(commentsWithoutDeletedOne);
     }

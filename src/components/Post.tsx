@@ -38,7 +38,7 @@ export interface PostType {
     username: Username;
     content: Content[];
     publishedAt: Date;
-    comments: CommentProps[]
+    comments: CommentProps[];
 }
 
 interface PostProps {
@@ -102,17 +102,18 @@ export function Post(props: PostProps) {
 
     function deleteComment(commentToDelete: string) {
         const commentsWithoutDeletedOne =
-            props.comments.filter((comment) => {
-                return comment.content !== commentToDelete;
+            allComments.filter((comment) => {
+                return comment.content != commentToDelete;
             });
 
+        console.log(allComments);
         setComment(commentsWithoutDeletedOne);
     }
 
     function handleNewCommentInvalid(
         ev: InvalidEvent<HTMLTextAreaElement>
     ) {
-        console.log(ev.target);
+        console.log(allComments);
         ev.target.setCustomValidity(
             "This field is required!"
         );
