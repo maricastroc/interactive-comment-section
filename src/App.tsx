@@ -26,7 +26,7 @@ const reply2Comment2 = {
         avatarUrl: juliusomoImg,
         name: "juliusomo"
     },
-    replyTo: "@maxblagun",
+    replyTo: "@ramsesmiron",
     content:
         "If I can give you a suggestion, I know some tutorials available on YouTube and some online courses at a very affordable price that can give you a good introduction to React!",
     publishedAt: new Date("2023-03-25 07:40:12"),
@@ -40,7 +40,7 @@ const reply1Comment1 = {
         avatarUrl: "https://github.com/maricastroc.png",
         name: "maricastroc"
     },
-    replyTo: "@amyrobson",
+    replyTo: "@ramsesmiron",
     content:
         "Sure, let's do it! I'm looking forward to see your resolution and discuss about it!",
     publishedAt: new Date("2023-03-23 07:40:12"),
@@ -54,7 +54,7 @@ const reply2Comment1 = {
         avatarUrl: amyImg,
         name: "amyrobson"
     },
-    replyTo: "@amyrobson",
+    replyTo: "@juliusomo",
     content:
         "If I can bet, I think she used the Phospor Icons. It's a really great library!",
     publishedAt: new Date("2023-03-24 16:40:12"),
