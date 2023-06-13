@@ -1,0 +1,96 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "username": {
+        "avatarUrl": "https://github.com/maricastroc.png",
+        "name": "maricastroc"
+    },
+    "content": [
+        {
+            "type": "paragraph",
+            "content": "Hey there, everyone! 👋"
+        },
+        {
+          "type": "paragraph",
+          "content":
+                "I just uploaded a new project to my GitHub. It's a landing page of a Coffee Roasters company, presenting general information about its products and allowing the user to customize their request and define how often they want to receive it. 🚀"
+        },
+        {
+          "type": "link",
+            "content":
+                "maricastroc/Coffee-Rosters-Landing-Page",
+            "url": "https://github.com/maricastroc/Coffee-Rosters-Landing-Page"
+        }
+    ],
+    "publishedAt": "2023-03-24 22:50:00"
+    },
+    {
+      "id": 2,
+      "username": {
+        "avatarUrl": "https://github.com/maricastroc.png",
+        "name": "maricastroc"
+    },
+    "content": [
+        {
+            "type": "paragraph",
+            "content": "Hello, people! 👻"
+        },
+        {
+          "type": "paragraph",
+          "content":
+          "I had a full programming study weekend. So, I started learning about API's and, for practice, I developed a project made with JS, using GitHub API user, that lets you search for a Github user by their username. Check it out! 💥"
+        },
+        {
+          "type": "link",
+            "content":
+                "maricastroc/Coffee-Rosters-Landing-Page",
+            "url": "https://github.com/maricastroc/Coffee-Rosters-Landing-Page"
+        }
+    ],
+    "publishedAt": "2023-03-24 22:50:00"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "post": 1,
+      "username": {
+        "avatarUrl": "avatars/image-amyrobson.png",
+        "name": "amyrobson"
+    },
+    "content": "Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You’ve nailed the design and the responsiveness at various breakpoints works really well.",
+    "publishedAt": "2023-03-25 14:20:25"
+    },
+    {
+      "id": 2,
+      "post": 1,
+      "username": {
+        "avatarUrl": "avatars/image-maxblagun.png",
+        "name": "maxblagun"
+    },
+    "content": "Woah, your project looks awesome! How long have you been coding for? I’m still new, but think I want to dive into React as well soon. Perhaps you can give me an insight on where I can learn React? Thanks!",
+    "publishedAt": "2023-03-24 23:20:12"
+    },
+    {
+      "id": 3,
+      "post": 2,
+      "username": {
+        "avatarUrl": "avatars/image-ramsesmiron.png",
+        "name": "ramsesmiron"
+    },
+    "content": "I see you've made some very interesting changes to the application's functionality! I also recently completed this challenge, we could talk about different resolutions!",
+    "publishedAt": "2023-03-21 15:50:30"
+    },
+    {
+      "id": 4,
+      "post": 2,
+      "username": {
+        "avatarUrl": "avatars/image-juliusomo.png",
+        "name": "juliusomo"
+    },
+    "content": "Good one, Mari! I really like the light/dark theme switching feature a lot! Did you use any icon libraries?",
+    "publishedAt": "2023-03-22 17:16:11"
+    }
+  ]
+}

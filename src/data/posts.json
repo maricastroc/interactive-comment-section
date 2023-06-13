@@ -1,0 +1,48 @@
+[
+  {
+    "id": 1,
+    "username": {
+      "avatarUrl": "https://github.com/maricastroc.png",
+      "name": "maricastroc"
+    },
+    "content": [
+      {
+        "type": "paragraph",
+        "content": "Hey there, everyone! 👋"
+      },
+      {
+        "type": "paragraph",
+        "content": "I just uploaded a new project to my GitHub. It's a landing page of a Coffee Roasters company, presenting general information about its products and allowing the user to customize their request and define how often they want to receive it. 🚀"
+      },
+      {
+        "type": "link",
+        "content": "maricastroc/Coffee-Rosters-Landing-Page",
+        "url": "https://github.com/maricastroc/Coffee-Rosters-Landing-Page"
+      }
+    ],
+    "publishedAt": "2023-03-24 22:50:00"
+  },
+  {
+    "id": 2,
+    "username": {
+      "avatarUrl": "https://github.com/maricastroc.png",
+      "name": "maricastroc"
+    },
+    "content": [
+      {
+        "type": "paragraph",
+        "content": "Hello, people! 👻"
+      },
+      {
+        "type": "paragraph",
+        "content": "I had a full programming study weekend. So, I started learning about APIs and, for practice, I developed a project made with JavaScript, using the GitHub API, that lets you search for a GitHub user by their username. Check it out! 💥"
+      },
+      {
+        "type": "link",
+        "content": "maricastroc/Coffee-Rosters-Landing-Page",
+        "url": "https://github.com/maricastroc/Coffee-Rosters-Landing-Page"
+      }
+    ],
+    "publishedAt": "2023-03-24 22:50:00"
+  }
+]
