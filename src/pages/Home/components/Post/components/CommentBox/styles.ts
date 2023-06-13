@@ -8,6 +8,7 @@ export const CommentBoxContainer = styled.form`
   background-color: ${(props) => props.theme.white};
   padding: 1.5rem;
   border-radius: 6px;
+  margin: 1rem 0;
 
   @media (min-width: 680px) {
     flex-direction: row;

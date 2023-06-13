@@ -45,8 +45,13 @@ export const TextAreaBox = styled.textarea`
     color: ${(props) => props.theme['blue-500']};
   }
 
+  @media (min-width: 480px) {
+    font-size: 0.9rem;
+  }
+
   @media (min-width: 680px) {
     height: 6rem;
+    font-size: 1rem;
   }
 `
 

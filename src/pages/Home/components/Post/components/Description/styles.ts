@@ -22,6 +22,17 @@ export const UserContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
+
+  > div {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  @media (min-width: 680px) {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
 `
 
 export const Avatar = styled.img`
@@ -43,6 +54,10 @@ export const Time = styled.p`
   font-size: 0.85rem;
   color: ${(props) => props.theme['grayish-blue-500']};
   font-weight: 400;
+
+  @media (min-width: 680px) {
+    font-size: 0.95rem;
+  }
 `
 
 export const TextContainer = styled.div`

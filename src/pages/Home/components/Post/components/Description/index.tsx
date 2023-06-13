@@ -35,10 +35,12 @@ export function Description({
       <Header>
         <Avatar src={avatarUrl} />
         <UserContainer>
-          <Username>{username}</Username>
+          <div>
+            <Username>{username}</Username>
+            <Tag />
+          </div>
           <Time>{publishedDateRelativeToNow}</Time>
         </UserContainer>
-        <Tag />
       </Header>
       <TextContainer>
         {content.map((line) => {

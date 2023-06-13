@@ -142,6 +142,10 @@ export const IconContainer = styled.div`
 export const Avatar = styled.img`
   border-radius: 50%;
   width: 2.3rem;
+
+  @media (min-width: 680px) {
+    width: 2.5rem;
+  }
 `
 
 export const UserInfo = styled.div`
@@ -154,6 +158,10 @@ export const UserData = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
+
+  @media (min-width: 680px) {
+    gap: 0.3rem;
+  }
 `
 
 export const Username = styled.strong`
@@ -170,6 +178,10 @@ export const Time = styled.p`
   font-size: 0.85rem;
   color: ${(props) => props.theme['grayish-blue-500']};
   font-weight: 400;
+
+  @media (min-width: 680px) {
+    font-size: 0.95rem;
+  }
 `
 
 export const TextContainer = styled.div`
@@ -191,6 +203,23 @@ export const TextContainer = styled.div`
 
 export const RepliesContainer = styled.div`
   display: flex;
+  width: 100%;
+  margin-bottom: 1.5rem;
+`
+
+export const RepliesContent = styled.div`
+  display: flex;
   flex-direction: column;
   width: 100%;
+`
+
+export const Separator = styled.div`
+  display: flex;
+
+  span {
+    margin: 0 2rem;
+    height: 100%;
+    width: 3px;
+    background-color: ${(props) => props.theme['gray-300']};
+  }
 `

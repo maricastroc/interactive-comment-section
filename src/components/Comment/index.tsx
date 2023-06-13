@@ -8,6 +8,8 @@ import {
   IconReplyContainer,
   Icons,
   RepliesContainer,
+  RepliesContent,
+  Separator,
   TextContainer,
   Time,
   UserData,
@@ -107,9 +109,14 @@ export function Comment({
         onSubmit={() => setIsReplyBoxOpen(false)}
       />
       <RepliesContainer>
-        {commentReplies.map((reply) => {
-          return <Reply key={reply.id} {...reply} />
-        })}
+        <Separator>
+          <span></span>
+        </Separator>
+        <RepliesContent>
+          {commentReplies.map((reply) => {
+            return <Reply key={reply.id} {...reply} />
+          })}
+        </RepliesContent>
       </RepliesContainer>
     </Wrapper>
   )

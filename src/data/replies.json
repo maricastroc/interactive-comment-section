@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "commentId": 2,
+    "username": {
+      "avatarUrl": "avatars/image-ramsesmiron.png",
+      "name": "ramsesmiron"
+    },
+    "content": "If I can make a suggestion, I think you could look up some courses on Udemy. There are also several channels on YouTube with free content of excellent quality. If you want, I can send you some links.",
+    "publishedAt": "2023-05-24 23:20:12",
+    "toUser": "maxblagun"
+  },
+  {
+    "id": 2,
+    "commentId": 2,
+    "username": {
+      "avatarUrl": "avatars/image-maxblagun.png",
+      "name": "maxblagun"
+    },
+    "content": "Man, I really appreciate it! Can you send me the links via DM?",
+    "publishedAt": "2023-06-05 23:20:12",
+    "toUser": "ramsesmiron"
+  },
+  {
+    "id": 3,
+    "commentId": 3,
+    "username": {
+      "avatarUrl": "https://github.com/maricastroc.png",
+      "name": "maricastroc"
+    },
+    "content": "For sure! I was already wanting to chat with you about your last CRUD app. I'm going to call you on Discord!",
+    "publishedAt": "2023-05-21 15:50:30",
+    "toUser": "ramsesmiron"
+  },
+  {
+    "id": 4,
+    "commentId": 4,
+    "username": {
+      "avatarUrl": "avatars/image-amyrobson.png",
+      "name": "amyrobson"
+    },
+    "content": "If I can bet, I guess she used Phosphor Icons. It is a great library, with a very well written documentation!",
+    "publishedAt": "2023-04-22 13:15:14",
+    "toUser": "juliusomo"
+  }
+]

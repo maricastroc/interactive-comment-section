@@ -8,18 +8,22 @@ import {
   Avatar,
   Header,
   IconContainer,
+  IconReplyContainer,
   Icons,
   ReplyContainer,
   ReplyContent,
+  ReplyWrapper,
   TextContainer,
   Time,
   UserData,
   UserInfo,
   Username,
 } from './styles'
+import { ReplyBox } from '../Comment/components/ReplyBox'
 
 export function Reply({
   id,
+  commentId,
   publishedAt,
   content,
   username,
@@ -29,6 +33,7 @@ export function Reply({
 
   const [rating, setRating] = useState(0)
 
+  const [isReplyBoxOpen, setIsReplyBoxOpen] = useState(false)
   const [isEditBoxOpen, setIsEditBoxOpen] = useState(false)
 
   const publishedDateRelativeToNow = formatDistanceToNow(
@@ -45,46 +50,65 @@ export function Reply({
   }
 
   return (
-    <ReplyContainer>
-      <Rating quantity={rating} onChange={handleSetRating} />
-      <ReplyContent>
-        <Header>
-          <UserInfo>
-            <Avatar src={username.avatarUrl} />
-            <UserData>
-              <Username>{username.name}</Username>
-              <Time>{publishedDateRelativeToNow}</Time>
-            </UserData>
-          </UserInfo>
-          <Icons>
-            <IconContainer>
-              <img
-                src="/icon-edit.svg"
-                alt=""
-                onClick={() => setIsEditBoxOpen(!isEditBoxOpen)}
-              />
-            </IconContainer>
-            <IconContainer>
-              <Trash size={22} weight="fill" onClick={() => removeReply(id)} />
-            </IconContainer>
-          </Icons>
-        </Header>
-        {isEditBoxOpen ? (
-          <Edit
-            isOpen={isEditBoxOpen}
-            type="reply"
-            onSubmit={() => setIsEditBoxOpen(false)}
-            initialContent={content}
-            id={id}
-          />
-        ) : (
-          <TextContainer>
-            <p>
-              <span>{`@${toUser}`}</span> {content}
-            </p>
-          </TextContainer>
-        )}
-      </ReplyContent>
-    </ReplyContainer>
+    <ReplyWrapper>
+      <ReplyContainer>
+        <Rating quantity={rating} onChange={handleSetRating} />
+        <ReplyContent>
+          <Header>
+            <UserInfo>
+              <Avatar src={username.avatarUrl} />
+              <UserData>
+                <Username>{username.name}</Username>
+                <Time>{publishedDateRelativeToNow}</Time>
+              </UserData>
+            </UserInfo>
+            <Icons>
+              {username.name === 'maricastroc' ? (
+                <Icons>
+                  <IconContainer
+                    onClick={() => setIsEditBoxOpen(!isEditBoxOpen)}
+                  >
+                    <img src="/icon-edit.svg" alt="" />
+                    <p className="edit">{isEditBoxOpen ? 'Close' : 'Edit'}</p>
+                  </IconContainer>
+                  <IconContainer onClick={() => removeReply(id)}>
+                    <Trash size={22} weight="fill" />
+                    <p className="delete">Delete</p>
+                  </IconContainer>
+                </Icons>
+              ) : (
+                <IconReplyContainer
+                  onClick={() => setIsReplyBoxOpen(!isReplyBoxOpen)}
+                >
+                  <img src="/icon-reply.svg" alt="" />
+                  <p>{isReplyBoxOpen ? 'Close' : 'Reply'}</p>
+                </IconReplyContainer>
+              )}
+            </Icons>
+          </Header>
+          {isEditBoxOpen ? (
+            <Edit
+              isOpen={isEditBoxOpen}
+              type="reply"
+              onSubmit={() => setIsEditBoxOpen(false)}
+              initialContent={content}
+              id={id}
+            />
+          ) : (
+            <TextContainer>
+              <p>
+                <span>{`@${toUser}`}</span> {content}
+              </p>
+            </TextContainer>
+          )}
+        </ReplyContent>
+      </ReplyContainer>
+      <ReplyBox
+        replyTo={username.name}
+        isOpen={isReplyBoxOpen}
+        commentId={commentId}
+        onSubmit={() => setIsReplyBoxOpen(false)}
+      />
+    </ReplyWrapper>
   )
 }

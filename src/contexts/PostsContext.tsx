@@ -7,6 +7,7 @@ import {
 } from 'react'
 import initialPosts from '../data/posts.json'
 import initialComments from '../data/comments.json'
+import initialReplies from '../data/replies.json'
 
 export interface ContentProps {
   type: 'paragraph' | 'link'
@@ -72,7 +73,9 @@ export function PostProvider({ children }: PostContextProps) {
     initialComments as CommentProps[],
   )
 
-  const [replies, setReplies] = useState<ReplyProps[]>([])
+  const [replies, setReplies] = useState<ReplyProps[]>(
+    initialReplies as ReplyProps[],
+  )
 
   function addNewComment(content: string, postId: number) {
     const lastCommentId = comments[comments.length - 1].id
@@ -116,13 +119,7 @@ export function PostProvider({ children }: PostContextProps) {
   }
 
   function addNewReply(content: string, commentId: number, toUser: string) {
-    let lastReplyId
-
-    if (replies.length > 0) {
-      lastReplyId = replies[replies.length - 1].id
-    } else {
-      lastReplyId = 0
-    }
+    const lastReplyId = replies[replies.length - 1].id
 
     const newReply = {
       id: lastReplyId + 1,
