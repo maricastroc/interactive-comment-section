@@ -47,7 +47,7 @@
 > Clone the repository:
 
 ```bash
-git clone https://github.com/maricastroc/Interactive-Comment-Section
+git clone https://github.com/maricastroc/interactive-comment-section
 ```
 
 > Install the dependencies:
@@ -80,7 +80,7 @@ npm run dev
        <br />
        <a href="https://www.linkedin.com/in/mariana-castro-297586264/" title="Linkedin">@maricastroc</a>
        <br />
-       <a href="https://github.com/maricastroc/Interactive-Comment-Section" title="Code">💻</a>
+       <a href="https://github.com/maricastroc/interactive-comment-section" title="Code">💻</a>
     </td>
     <td align="center">
       <a href="https://www.frontendmentor.io/home">
