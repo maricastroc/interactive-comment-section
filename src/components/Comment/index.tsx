@@ -1,3 +1,4 @@
+import * as Dialog from '@radix-ui/react-dialog'
 import { formatDistanceToNow } from 'date-fns'
 import {
   Avatar,
@@ -24,6 +25,7 @@ import { useState, useContext } from 'react'
 import { Trash } from 'phosphor-react'
 import { Edit } from './components/Edit'
 import { Reply } from '../Reply'
+import { RemoveCommentModal } from '../RemoveCommentModal'
 
 export function Comment({
   id,
@@ -32,7 +34,7 @@ export function Comment({
   username,
   isFromUser,
 }: CommentProps) {
-  const { removeComment, replies } = useContext(PostsContext)
+  const { replies } = useContext(PostsContext)
 
   const [rating, setRating] = useState(0)
 
@@ -75,10 +77,15 @@ export function Comment({
                   <img src="/icon-edit.svg" alt="" />
                   <p className="edit">{isEditBoxOpen ? 'Close' : 'Edit'}</p>
                 </IconContainer>
-                <IconContainer onClick={() => removeComment(id)}>
-                  <Trash size={22} weight="fill" />
-                  <p className="delete">Delete</p>
-                </IconContainer>
+                <Dialog.Root>
+                  <Dialog.Trigger asChild>
+                    <IconContainer>
+                      <Trash size={22} weight="fill" />
+                      <p className="delete">Delete</p>
+                    </IconContainer>
+                  </Dialog.Trigger>
+                  <RemoveCommentModal idToRemove={id} type="comment" />
+                </Dialog.Root>
               </Icons>
             ) : (
               <IconReplyContainer

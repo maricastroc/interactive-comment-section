@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.0.9",
+    "@radix-ui/react-dialog": "^1.0.4",
     "axios": "^1.4.0",
     "date-fns": "^2.30.0",
     "json-server": "^0.17.3",

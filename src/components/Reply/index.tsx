@@ -1,7 +1,8 @@
+import * as Dialog from '@radix-ui/react-dialog'
 import { formatDistanceToNow } from 'date-fns'
 import { Rating } from '../Rating'
-import { PostsContext, ReplyProps } from '../../contexts/PostsContext'
-import { useState, useContext } from 'react'
+import { ReplyProps } from '../../contexts/PostsContext'
+import { useState } from 'react'
 import { Trash } from 'phosphor-react'
 import { Edit } from '../Comment/components/Edit'
 import {
@@ -20,6 +21,7 @@ import {
   Username,
 } from './styles'
 import { ReplyBox } from '../Comment/components/ReplyBox'
+import { RemoveCommentModal } from '../RemoveCommentModal'
 
 export function Reply({
   id,
@@ -29,8 +31,6 @@ export function Reply({
   username,
   toUser,
 }: ReplyProps) {
-  const { removeReply } = useContext(PostsContext)
-
   const [rating, setRating] = useState(0)
 
   const [isReplyBoxOpen, setIsReplyBoxOpen] = useState(false)
@@ -71,10 +71,15 @@ export function Reply({
                     <img src="/icon-edit.svg" alt="" />
                     <p className="edit">{isEditBoxOpen ? 'Close' : 'Edit'}</p>
                   </IconContainer>
-                  <IconContainer onClick={() => removeReply(id)}>
-                    <Trash size={22} weight="fill" />
-                    <p className="delete">Delete</p>
-                  </IconContainer>
+                  <Dialog.Root>
+                    <Dialog.Trigger asChild>
+                      <IconContainer>
+                        <Trash size={22} weight="fill" />
+                        <p className="delete">Delete</p>
+                      </IconContainer>
+                    </Dialog.Trigger>
+                    <RemoveCommentModal idToRemove={id} type="reply" />
+                  </Dialog.Root>
                 </Icons>
               ) : (
                 <IconReplyContainer
