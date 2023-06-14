@@ -15,6 +15,7 @@
 <li>Upvote and downvote comments</li>
 <br/>
 <p>The resolution to this challenge has been modified. Initially, the project solely requested the creation of comments and replies. However, I enhanced my solution by incorporating the Post component, thereby imbuing the project with a greater resemblance to a genuine application.</p>
+<br/>
 <p dir="auto"><a href="https://www.frontendmentor.io/challenges?difficulties=4" rel="nofollow"><img src="https://camo.githubusercontent.com/2f6759402e9f7625555fa5f32350ff20062bf34c3a829d2398075c44fe98be85/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446966666963756c74792d494e5445524d4544494154452d6631623630343f7374796c653d666f722d7468652d6261646765266c6f676f3d66726f6e74656e646d656e746f72" alt="Challenge Difficulty - INTERMEDIATE" data-canonical-src="https://img.shields.io/badge/Difficulty-INTERMEDIATE-f1b604?style=for-the-badge&amp;logo=frontendmentor" style="max-width: 100%;"></a></p>
 <br/>
 <h2>:pushpin: What did I learn?</h2>
