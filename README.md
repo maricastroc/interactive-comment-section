@@ -1,6 +1,6 @@
 # Interactive Comment Section
 <p align="center">
-    <img alt="Print" src="/assets/print.png" width="800px" />
+    <img alt="Print" src="https://github.com/maricastroc/Interactive-Comment-Section/blob/main/public/print.png" width="800px" />
 </p>
 
 <br/>
