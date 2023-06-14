@@ -115,16 +115,18 @@ export function Comment({
         commentId={id}
         onSubmit={() => setIsReplyBoxOpen(false)}
       />
-      <RepliesContainer>
-        <Separator>
-          <span></span>
-        </Separator>
-        <RepliesContent>
-          {commentReplies.map((reply) => {
-            return <Reply key={reply.id} {...reply} />
-          })}
-        </RepliesContent>
-      </RepliesContainer>
+      {commentReplies.length > 0 && (
+        <RepliesContainer>
+          <Separator>
+            <span></span>
+          </Separator>
+          <RepliesContent>
+            {commentReplies.map((reply) => {
+              return <Reply key={reply.id} {...reply} />
+            })}
+          </RepliesContent>
+        </RepliesContainer>
+      )}
     </Wrapper>
   )
 }

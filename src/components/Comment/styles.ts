@@ -5,6 +5,10 @@ export const Wrapper = styled.div`
   flex-direction: column;
   min-width: 100%;
   gap: 1rem;
+
+  @media (min-width: 680px) {
+    gap: 1rem;
+  }
 `
 
 export const CommentContainer = styled.div`
@@ -204,22 +208,26 @@ export const TextContainer = styled.div`
 export const RepliesContainer = styled.div`
   display: flex;
   width: 100%;
-  margin-bottom: 1.5rem;
 `
 
 export const RepliesContent = styled.div`
   display: flex;
   flex-direction: column;
+  gap: 1rem;
   width: 100%;
 `
 
 export const Separator = styled.div`
-  display: flex;
+  display: none;
 
   span {
     margin: 0 2rem;
     height: 100%;
     width: 3px;
     background-color: ${(props) => props.theme['gray-300']};
+  }
+
+  @media (min-width: 680px) {
+    display: flex;
   }
 `

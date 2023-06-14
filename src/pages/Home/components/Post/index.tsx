@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import { CommentBox } from './components/CommentBox'
 import { Description } from './components/Description'
-import { PostContainer } from './styles'
+import { CommentsSection, PostContainer } from './styles'
 import { Comment } from '../../../../components/Comment'
 import {
   CommentProps,
@@ -23,9 +23,11 @@ export function Post({ id, publishedAt, content, username }: PostProps) {
         username={username.name}
       />
       <CommentBox postId={id} />
-      {postComments.map((comment: CommentProps) => {
-        return <Comment key={comment.id} {...comment} />
-      })}
+      <CommentsSection>
+        {postComments.map((comment: CommentProps) => {
+          return <Comment key={comment.id} {...comment} />
+        })}
+      </CommentsSection>
     </PostContainer>
   )
 }

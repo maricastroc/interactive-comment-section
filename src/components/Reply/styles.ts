@@ -8,7 +8,6 @@ export const ReplyWrapper = styled.div`
 `
 
 export const ReplyContainer = styled.div`
-  margin-top: 2rem;
   display: flex;
   align-items: flex-start;
   gap: 1rem;
